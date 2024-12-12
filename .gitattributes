@@ -1,0 +1,5 @@
+*Unity filter=lfs diff=lfs merge=lfs -text
+2D filter=lfs diff=lfs merge=lfs -text
+Rhythm filter=lfs diff=lfs merge=lfs -text
+GameLibraryPackageCachecom.unity.burst@1.8.7.Runtimelibburst-llvm-15.dylib filter=lfs diff=lfs merge=lfs -text
+libburst-llvm-15.dylib filter=lfs diff=lfs merge=lfs -text
