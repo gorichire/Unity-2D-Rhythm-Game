@@ -381,6 +381,8 @@
 "Assets/Scripts/BackgroundBehavior.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/Note Behavior.cs"
+"Assets/Scripts/NoteController.cs"
+"Assets/Scripts/ObjectPooler.cs"
 -langversion:9.0
 
 /deterministic
