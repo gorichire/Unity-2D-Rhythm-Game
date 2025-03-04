@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "689451634871",
+    "firebase_url": "https://unity-rythm-game-tutoria-68ad8-default-rtdb.firebaseio.com",
+    "project_id": "unity-rythm-game-tutoria-68ad8",
+    "storage_bucket": "unity-rythm-game-tutoria-68ad8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:689451634871:android:e9b285141cf4abd6d77d32",
+        "android_client_info": {
+          "package_name": "com.jaegoo.unityrhythmgame"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpaOH2y4nw3nm8ay2oVzXDLDO0FDZWDIY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
