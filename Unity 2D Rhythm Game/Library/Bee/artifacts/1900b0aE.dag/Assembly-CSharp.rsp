@@ -380,9 +380,12 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/BackgroundBehavior.cs"
 "Assets/Scripts/GameManager.cs"
+"Assets/Scripts/GameResultManager.cs"
 "Assets/Scripts/Note Behavior.cs"
 "Assets/Scripts/NoteController.cs"
 "Assets/Scripts/ObjectPooler.cs"
+"Assets/Scripts/PlayerInformation.cs"
+"Assets/Scripts/SongSelectManager.cs"
 -langversion:9.0
 
 /deterministic

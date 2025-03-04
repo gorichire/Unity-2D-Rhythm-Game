@@ -19,13 +19,14 @@ public class GameManager : MonoBehaviour
     public float notespeed;
 
     public GameObject scoreUI;
-    private float score;
+    public float score;
     private Text scoreText;
 
     public GameObject comboUI;
     private int combo;
     private Text comboText;
     private Animator comboAnimator;
+    public int maxCombo;
 
     public enum judges { NONE = 0 , BAD , GOOD , PERFECT, MISS }
     public GameObject judgeUI;
@@ -36,9 +37,25 @@ public class GameManager : MonoBehaviour
     public GameObject[] trails;
     private SpriteRenderer[] trailSpriteRenderers;
 
-    // Start is called before the first frame update
+    // 음악 변수
+    private AudioSource audioSource;
+
+    // 자동 판정 모드 변수
+    public bool autoPerfect;
+
+    // 음악 실행 함수
+    void MusicStart()
+    {
+        // 리소스에서 비트(Beat) 음악 파일을 불러와 재생합니다.
+        AudioClip audioClip = Resources.Load<AudioClip>("Beats/" + PlayerInformation.selectedMusic);
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = audioClip;
+        audioSource.Play();
+    }
+
     void Start()
     {
+        Invoke("MusicStart", 2);
         judgementSpriteRenderer = judgeUI.GetComponent<Image>();
         judgementSpriteAnimator = judgeUI.GetComponent<Animator>();
         scoreText = scoreUI.GetComponent<Text>();
@@ -59,7 +76,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         // 사용자가 입력한 키에 해당하는 라인을 빛나게 처리한다.
@@ -97,6 +113,10 @@ public class GameManager : MonoBehaviour
         {
             comboText.text = "COMBO" + combo.ToString();
             comboAnimator.SetTrigger("Show");
+        }
+        if(maxCombo < combo)
+        {
+            maxCombo = combo;
         }
     }
 
