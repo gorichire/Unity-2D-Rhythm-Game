@@ -14,8 +14,8 @@ public class NoteBehavior : MonoBehaviour
     {
         if (noteType == 1) KeyCode = KeyCode.D;
         else if (noteType == 2) KeyCode = KeyCode.F;
-        else if (noteType == 2) KeyCode = KeyCode.J;
-        else if (noteType == 2) KeyCode = KeyCode.K;
+        else if (noteType == 3) KeyCode = KeyCode.J;
+        else if (noteType == 4) KeyCode = KeyCode.K;
     }
 
     public void Initialieze()
@@ -36,6 +36,14 @@ public class NoteBehavior : MonoBehaviour
             if (judge != GameManager.judges.NONE) gameObject.SetActive(false);
         }
     }
+
+/*    public void Judge()
+    {
+        // 해당 노트에 대한 판정을 진행합니다.
+        GameManager.instance.processJudge(judge, noteType);
+        // 노트가 판정 선에 닿기 시작한 이후로는 해당 노트를 제거합니다.
+        if (judge != GameManager.judges.NONE) gameObject.SetActive(false);
+    }*/
 
     // 각 노트의 현재 위치에 대하여 판정을 수행합니다.
     private void OnTriggerEnter2D(Collider2D other)
